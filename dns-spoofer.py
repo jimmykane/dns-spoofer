@@ -15,7 +15,7 @@ def resolve_dn(domain_name):
     try:
         dataip = socket.gethostbyname_ex(domain_name)
         ip = str(dataip[2][0]).strip("[] '")
-        print  "Resolving Domain [%s]->[%s]" %( domain_name ,  ip  )
+        print "Resolving Domain [%s]->[%s]" %( domain_name ,  ip  )
         return ip
     except socket.gaierror:
         print "Error! Resolving Domain [%s]!" %( domain_name )
